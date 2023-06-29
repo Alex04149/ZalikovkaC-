@@ -9,8 +9,7 @@ namespace Learn
     class Program
     {
         static void Main(string[] args)
-        {
-            const int k_1 = 6, k_2 = 5, k_3 = 4, k_4 = 4, k_5 = 4, k_6 = 3, k_7 = 2, k_8 = 2;
+        {    
             int higerMath, fiziks, informaticks, history, TCA, ecology, english, PE;
             Console.WriteLine("Enter the rating for vishmat:");
             higerMath = int.Parse(Console.ReadLine());
@@ -28,9 +27,11 @@ namespace Learn
             english = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the assessment in physical education:");
             PE = int.Parse(Console.ReadLine());
+            double numeral = (Coeficients.higherMath * higerMath + Coeficients.fiziks * fiziks + Coeficients.informaticks * informaticks
+                + Coeficients.history * history + Coeficients.tca * TCA +Coeficients.english*english
+                + Coeficients.ecology * ecology + Coeficients.PE * PE);   
             double rating;
-            rating = 90.0 * (k_1 * higerMath + k_2 * fiziks + k_3 * informaticks + k_4 * TCA + k_5 * history + k_6 * ecology  + k_7 * english + k_8 * PE)
-                 / ((k_1 + k_2 + k_3 + k_4 + k_5 + k_6 + k_7 + k_8) * 100);
+            rating = (90.0 * numeral)/ (Coeficients.sum * 100);
             Console.WriteLine("Your rating score =" + rating);
             Console.ReadLine();
         }
