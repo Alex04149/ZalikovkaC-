@@ -10,13 +10,13 @@ namespace Learn
     {
         static void Main(string[] args)
         {    
-            int higerMath, fiziks, informaticks, history, TCA, ecology, english, PE;
-            Console.WriteLine("Enter the rating for vishmat:");
+            int higerMath, physics, informatics, history, TCA, ecology, english, PE;
+            Console.WriteLine("Enter the rating for higher math:");
             higerMath = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter an assessment in physics:");
-            fiziks = int.Parse(Console.ReadLine());
+            physics = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter an assessment in computer science:");
-            informaticks = int.Parse(Console.ReadLine());
+            informatics = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter an estimate from history:");
             history = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the TCA score:");
@@ -27,7 +27,7 @@ namespace Learn
             english = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the assessment in physical education:");
             PE = int.Parse(Console.ReadLine());
-            double numeral = (Coeficients.higherMath * higerMath + Coeficients.fiziks * fiziks + Coeficients.informaticks * informaticks
+            double numeral = (Coeficients.higherMath * higerMath + Coeficients.physics * physics + Coeficients.informatics * informatics
                 + Coeficients.history * history + Coeficients.tca * TCA +Coeficients.english*english
                 + Coeficients.ecology * ecology + Coeficients.PE * PE);   
             double rating;
