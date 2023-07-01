@@ -9,30 +9,30 @@ namespace Learn
     class Program
     {
         static void Main(string[] args)
-        {    
-            int higherMath, physics, informatics, history, TDA, ecology, english, PE;
-            Console.WriteLine("Enter the rating for higher math:");
-            higherMath = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in physics:");
-            physics = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in computer science:");
-            informatics = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an estimate from history:");
-            history = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the TDA score:");
-            TDA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter environmental assessment");
-            ecology = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in English:");
-            english = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the assessment in physical education:");
-            PE = int.Parse(Console.ReadLine());
-            double numeral = (Coeficients.higherMath * higherMath + Coeficients.physics * physics + Coeficients.informatics * informatics
-                + Coeficients.history * history + Coeficients.TDA * TDA +Coeficients.english*english
-                + Coeficients.ecology * ecology + Coeficients.PE * PE);   
+        {
             double rating;
             const double maxAssessmentOfDiscipline = 90;
             const int maxAssessmentOfRating = 100;
+            int higherMathScore, physicsScore, informaticsScore, historyScore, TheoryOfDigitalAutomataScore, ecologyScore, englishScore, physicalEducationScore;
+            Console.WriteLine("Enter the rating for higher math:");
+            higherMathScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an assessment in physics:");
+            physicsScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an assessment in computer science:");
+            informaticsScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an estimate from history:");
+            historyScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the TDA score:");
+            TheoryOfDigitalAutomataScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter environmental assessment");
+            ecologyScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an assessment in English:");
+            englishScore = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the assessment in physical education:");
+            physicalEducationScore = int.Parse(Console.ReadLine());
+            double numeral = (Coeficients.higherMath * higherMathScore + Coeficients.physics * physicsScore + Coeficients.informatics * informaticsScore
+                + Coeficients.history * historyScore + Coeficients.TDA * TheoryOfDigitalAutomataScore + Coeficients.english*englishScore
+                + Coeficients.ecology * ecologyScore + Coeficients.PE * physicalEducationScore);   
             rating = (maxAssessmentOfDiscipline * numeral)/ (Coeficients.sum * maxAssessmentOfRating);
             Console.WriteLine("Your rating score =" + rating);
             Console.ReadLine();

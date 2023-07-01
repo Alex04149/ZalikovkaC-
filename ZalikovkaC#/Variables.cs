@@ -22,5 +22,8 @@ public class Class1
 {
 	public Class1()
 	{
-	}
+        double rating;
+        const double maxAssessmentOfDiscipline = 90;
+        const int maxAssessmentOfRating = 100;
+    }
 }
