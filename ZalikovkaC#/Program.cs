@@ -32,16 +32,17 @@ namespace Learn
                 englishScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter the assessment in physical education:");
                 physicalEducationScore = int.Parse(Console.ReadLine());
+                double numeral = (Coeficients.higherMath * higherMathScore + Coeficients.physics * physicsScore + Coeficients.informatics * informaticsScore
+                + Coeficients.history * historyScore + Coeficients.TDA * TheoryOfDigitalAutomataScore + Coeficients.english * englishScore
+                + Coeficients.ecology * ecologyScore + Coeficients.PE * physicalEducationScore);
+                rating = (maxAssessmentOfDiscipline * numeral) / (Coeficients.sum * maxAssessmentOfRating);
+                Console.WriteLine("Your rating score =" + rating);
+                Console.ReadLine();
             }
             catch {
                 Console.WriteLine("ERROR! ENTER RIGHT SCORE!");
             }
-            double numeral = (Coeficients.higherMath * higherMathScore + Coeficients.physics * physicsScore + Coeficients.informatics * informaticsScore
-                + Coeficients.history * historyScore + Coeficients.TDA * TheoryOfDigitalAutomataScore + Coeficients.english*englishScore
-                + Coeficients.ecology * ecologyScore + Coeficients.PE * physicalEducationScore);   
-            rating = (maxAssessmentOfDiscipline * numeral)/ (Coeficients.sum * maxAssessmentOfRating);
-            Console.WriteLine("Your rating score =" + rating);
-            Console.ReadLine();
+            
         }
     }
 }

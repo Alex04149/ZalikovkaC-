@@ -18,10 +18,3 @@ static public class Coeficients
 }
 
 
-public class Class1
-{
-	public Class1()
-    { 
-
-    }
-}
