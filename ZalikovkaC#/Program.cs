@@ -40,7 +40,7 @@ namespace Learn
                 Console.ReadLine();
             }
             catch {
-                Console.WriteLine("ERROR! ENTER RIGHT SCORE!");
+                Console.WriteLine("ERROR!PLEASE ENTER RIGHT SCORE!");
             }
             
         }
