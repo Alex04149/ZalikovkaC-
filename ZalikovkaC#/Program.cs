@@ -12,7 +12,7 @@ namespace Learn
             double rating;
             const double maxAssessmentOfDiscipline = 90;
             const int maxAssessmentOfRating = 100;
-            int higherMathScore=0, physicsScore=0, informaticsScore= 0, historyScore = 0, TheoryOfDigitalAutomataScore = 0, ecologyScore = 0, englishScore = 0, physicalEducationScore = 0;
+            int higherMathScore = 0, physicsScore = 0, informaticsScore = 0, historyScore = 0, TheoryOfDigitalAutomataScore = 0, ecologyScore = 0, englishScore = 0, physicalEducationScore = 0;
             try
             {
                 Console.WriteLine("Enter the rating for higher math:");
@@ -38,10 +38,10 @@ namespace Learn
                 Console.WriteLine("Your rating score =" + rating);
                 Console.ReadLine();
             }
-            catch {
+            catch
+            {
                 Console.WriteLine("ERROR!PLEASE ENTER RIGHT SCORE!");
             }
-            
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-
-
 public class Coeficients
 {
     public const int higherMath = 6;
