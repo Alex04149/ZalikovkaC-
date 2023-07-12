@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Coeficients
+public class Coefficients
 {
     public const int higherMath = 6;
     public const int physics = 5;

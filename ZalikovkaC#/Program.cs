@@ -28,10 +28,10 @@ namespace Learn
                     englishScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter the assessment in physical education:");
                     physicalEducationScore = int.Parse(Console.ReadLine());
-                double numeral = (Coeficients.higherMath * higherMathScore + Coeficients.physics * physicsScore + Coeficients.informatics * informaticsScore
-                + Coeficients.history * historyScore + Coeficients.TDA * TheoryOfDigitalAutomataScore + Coeficients.english * englishScore
-                + Coeficients.ecology * ecologyScore + Coeficients.PE * physicalEducationScore);
-                     rating = (maxAssessmentOfDiscipline * numeral) / (Coeficients.sum * maxAssessmentOfRating);
+                double numeral = (Coefficients.higherMath * higherMathScore + Coefficients.physics * physicsScore + Coefficients.informatics * informaticsScore
+                + Coefficients.history * historyScore + Coefficients.TDA * TheoryOfDigitalAutomataScore + Coefficients.english * englishScore
+                + Coefficients.ecology * ecologyScore + Coefficients.PE * physicalEducationScore);
+                     rating = (maxAssessmentOfDiscipline * numeral) / (Coefficients.sum * maxAssessmentOfRating);
                 Console.WriteLine("Your rating score =" + rating);
                 Console.ReadLine();
             }
