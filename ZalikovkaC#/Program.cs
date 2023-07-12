@@ -13,25 +13,25 @@ namespace Learn
             try
             {
                 Console.WriteLine("Enter the rating for higher math:");
-                higherMathScore = int.Parse(Console.ReadLine());
+                    higherMathScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter an assessment in physics:");
-                physicsScore = int.Parse(Console.ReadLine());
+                    physicsScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter an assessment in computer science:");
-                informaticsScore = int.Parse(Console.ReadLine());
+                    informaticsScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter an estimate from history:");
-                historyScore = int.Parse(Console.ReadLine());
+                    historyScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter the TDA score:");
-                TheoryOfDigitalAutomataScore = int.Parse(Console.ReadLine());
+                    TheoryOfDigitalAutomataScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter environmental assessment");
-                ecologyScore = int.Parse(Console.ReadLine());
+                    ecologyScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter an assessment in English:");
-                englishScore = int.Parse(Console.ReadLine());
+                    englishScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter the assessment in physical education:");
-                physicalEducationScore = int.Parse(Console.ReadLine());
+                    physicalEducationScore = int.Parse(Console.ReadLine());
                 double numeral = (Coeficients.higherMath * higherMathScore + Coeficients.physics * physicsScore + Coeficients.informatics * informaticsScore
                 + Coeficients.history * historyScore + Coeficients.TDA * TheoryOfDigitalAutomataScore + Coeficients.english * englishScore
                 + Coeficients.ecology * ecologyScore + Coeficients.PE * physicalEducationScore);
-                rating = (maxAssessmentOfDiscipline * numeral) / (Coeficients.sum * maxAssessmentOfRating);
+                     rating = (maxAssessmentOfDiscipline * numeral) / (Coeficients.sum * maxAssessmentOfRating);
                 Console.WriteLine("Your rating score =" + rating);
                 Console.ReadLine();
             }
