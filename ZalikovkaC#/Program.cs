@@ -1,37 +1,122 @@
-﻿
-using Microsoft.VisualBasic;
-using System;
-using System.ComponentModel;
-using System.Data.SqlTypes;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Learn
+
+namespace Zalikversion2._0
 {
-    class Program
+
+    public class Subject
     {
+        public string name;
+        public int Score;
+        public int Coefficient;
+    }
+    internal class Program
+    {
+        static List<Subject> getSubject(int semester)
+        {
+            List<Subject> subject = new List<Subject>();
+            subject.Add(new Subject());
+            switch (semester)
+            {
+                case 1:
+                    subject.AddRange(new Subject[8]);
+                    for (int i = 0; i < subject.Count; i++)
+                    { subject[i] = new Subject(); }
+                    subject[0].name = "Math";
+                    subject[0].Coefficient = 6;
+                    subject[1].name = "Physics";
+                    subject[1].Coefficient = 5;
+                    subject[2].name = "informatics";
+                    subject[2].Coefficient = 4;
+                    subject[3].name = "Grafics";
+                    subject[3].Coefficient = 5;
+                    subject[4].name = "Mova";
+                    subject[4].Coefficient = 3;
+                    subject[5].name = "Vstup";
+                    subject[5].Coefficient = 3;
+                    subject[6].name = "English";
+                    subject[6].Coefficient = 2;
+                    subject[7].name = "PE";
+                    subject[7].Coefficient = 2;
+                    break;
+                case 2:
+                    subject.AddRange(new Subject[8]);
+                    for (int i = 0; i < subject.Count; i++)
+                    { subject[i] = new Subject(); }
+                    subject[0].name = "Math";
+                    subject[0].Coefficient = 6;
+                    subject[1].name = "Physics";
+                    subject[1].Coefficient = 5;
+                    subject[2].name = "informatics";
+                    subject[2].Coefficient = 4;
+                    subject[3].name = "History";
+                    subject[3].Coefficient = 4;
+                    subject[4].name = "Theory of digital automata";
+                    subject[4].Coefficient = 4;
+                    subject[5].name = "Ecology";
+                    subject[5].Coefficient = 3;
+                    subject[6].name = "English";
+                    subject[6].Coefficient = 2;
+                    subject[7].name = "PE";
+                    subject[7].Coefficient = 2;
+                    break;
+                case 3:
+                    subject.AddRange(new Subject[8]);
+                    for (int i = 0; i < subject.Count; i++)
+                    { subject[i] = new Subject(); }
+                    subject[0].name = "Math";
+                    subject[0].Coefficient = 6;
+                    subject[1].name = "electrical engineering and electromechanics";
+                    subject[1].Coefficient = 6;
+                    subject[2].name = "physics";
+                    subject[2].Coefficient = 3;
+                    subject[3].name = "information Technology and Programming";
+                    subject[3].Coefficient = 5;
+                    subject[4].name = "philosophy";
+                    subject[4].Coefficient = 3;
+                    subject[5].name = "English";
+                    subject[5].Coefficient = 2;
+                    subject[6].name = "Applied Mechanics";
+                    subject[6].Coefficient = 2;
+                    subject[7].name = "PE";
+                    subject[7].Coefficient = 2;
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                default:
+                    break;
+            }
+            return subject;
+        }
         static void Main(string[] args)
         {
-            int k_1 = 6, k_2 = 5, k_3 = 4, k_4 = 4, k_5 = 4, k_6 = 3, k_7 = 2, k_8 = 2;
-            int VM, F, INF, HIST, TCA, ECO, ENG, ENG_1, FIZ;
-            Console.WriteLine("Enter the rating for vishmat:");
-            VM = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in physics:");
-            F = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in computer science:");
-            INF = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an estimate from history:");
-            HIST = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the TCA score:");
-            TCA = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter environmental assessment");
-            ECO = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter an assessment in English:");
-            ENG = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the assessment in physical education:");
-            FIZ = int.Parse(Console.ReadLine());
+            int semester;
+            int sumScoreAndCoefficient = 0;
+            int sumCoefficient = 0;
             double rating;
-            rating = 90.0 * (k_1 * VM + k_2 * F + k_3 * INF + k_4 * TCA + k_5 * HIST + k_6 * ECO + k_7 * ENG + k_8 * FIZ)
-                 / ((k_1 + k_2 + k_3 + k_4 + k_5 + k_6 + k_7 + k_8) * 100);
-            Console.WriteLine("Your rating score =" + rating);
+            const double maxAssessmentOfDiscipline = 90.0;
+            const int maxAssessmentOfRating = 100;
+            Console.WriteLine("Enter your semester");
+            semester = int.Parse(Console.ReadLine());
+            List<Subject> subjects = getSubject(semester);
+            for (int i = 0; i < subjects.Count - 1; i++)
+            {
+                Console.WriteLine("Enter score by " + subjects[i].name);
+                subjects[i].Score = int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < subjects.Count - 1; i++)
+            {
+                int temp;
+                temp = subjects[i].Score * subjects[i].Coefficient;
+                sumScoreAndCoefficient += temp;
+                sumCoefficient += subjects[i].Coefficient;
+            }
+            rating = (maxAssessmentOfDiscipline * sumScoreAndCoefficient) / (sumCoefficient * maxAssessmentOfRating);
+            Console.WriteLine("Your rating score = " + rating);
             Console.ReadLine();
         }
     }
