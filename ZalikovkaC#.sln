@@ -5,6 +5,11 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZalikovkaC#", "ZalikovkaC#\ZalikovkaC#.csproj", "{80FD158B-D54B-4C4D-8E19-ED4C37EC9C38}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{132916D0-B26D-4996-A7E9-599D89A696CC}"
+	ProjectSection(SolutionItems) = preProject
+		Variables.cs = Variables.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
